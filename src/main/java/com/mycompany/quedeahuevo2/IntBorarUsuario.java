@@ -1,8 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
- */
 package com.mycompany.quedeahuevo2;
+
+import java.sql.Connection;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -163,7 +163,7 @@ public class IntBorarUsuario extends javax.swing.JInternalFrame {
         
         String usuario = txtNombre.getText();
         String apellido = txtApellido.getText();
-        String sql = "Delete From usuarios Where usuario = '"+ usuario"' and apellido = '"+apellido"';
+        String sql = "Delete From usuarios Where usuario = '"+usuario+"' and apellido = '"+apellido+"';";
         System.out.println(sql);
         
         try{
