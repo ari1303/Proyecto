@@ -92,6 +92,11 @@ public class Menu extends javax.swing.JFrame {
         menuProductos.setPreferredSize(new java.awt.Dimension(150, 50));
 
         menuNuevoProducto.setText("Nuevo Producto");
+        menuNuevoProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuNuevoProductoActionPerformed(evt);
+            }
+        });
         menuProductos.add(menuNuevoProducto);
 
         menuListaProductos.setText("Lista de Productos");
@@ -181,6 +186,10 @@ public class Menu extends javax.swing.JFrame {
         DesktopPane_menu.add(intCategoria);
         intCategoria.setVisible(true);   
     }//GEN-LAST:event_menuNuevaCategoriaActionPerformed
+
+    private void menuNuevoProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNuevoProductoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menuNuevoProductoActionPerformed
 
     /**
      * @param args the command line arguments
