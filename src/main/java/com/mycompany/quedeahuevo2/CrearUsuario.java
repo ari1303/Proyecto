@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
- */
 package com.mycompany.quedeahuevo2;
 
 import java.sql.Connection;
@@ -23,10 +19,6 @@ public class CrearUsuario extends javax.swing.JDialog {
     public CrearUsuario(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-    }
-
-    CrearUsuario() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**
