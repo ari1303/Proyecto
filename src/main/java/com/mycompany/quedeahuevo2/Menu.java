@@ -121,6 +121,11 @@ public class Menu extends javax.swing.JFrame {
         menuCategorias.setPreferredSize(new java.awt.Dimension(150, 50));
 
         menuNuevaCategoria.setText("Nueva Categoria");
+        menuNuevaCategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuNuevaCategoriaActionPerformed(evt);
+            }
+        });
         menuCategorias.add(menuNuevaCategoria);
 
         menuListaCategorias.setText("Lista De Categorias");
@@ -176,6 +181,10 @@ public class Menu extends javax.swing.JFrame {
     private void menuBorrarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuBorrarUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_menuBorrarUsuarioActionPerformed
+
+    private void menuNuevaCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNuevaCategoriaActionPerformed
+        IntCategoria interCategoria = new IntCategoria();
+    }//GEN-LAST:event_menuNuevaCategoriaActionPerformed
 
     /**
      * @param args the command line arguments
