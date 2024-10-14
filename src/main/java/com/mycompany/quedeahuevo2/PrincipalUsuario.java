@@ -64,6 +64,11 @@ public class PrincipalUsuario extends javax.swing.JFrame {
 
         btnInicio.setText("Iniciar Sesión");
         btnInicio.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInicioActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, -1, -1));
 
         txtCrearUsuario.setText("Crear Usuario");
@@ -98,6 +103,10 @@ public class PrincipalUsuario extends javax.swing.JFrame {
           this.dispose();                            // Cerrar la ventana actual
 
     }//GEN-LAST:event_txtCrearUsuarioActionPerformed
+
+    private void btnInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnInicioActionPerformed
 
     /**
      * @param args the command line arguments
