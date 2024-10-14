@@ -11,7 +11,7 @@ package com.mycompany.quedeahuevo2;
 public class QueDeAhuevo2 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        System.out.println("hola oscar");
+        BaseDatos bd = new BaseDatos();
+        Connection cnx = bd.getConexion();
     }
 }
