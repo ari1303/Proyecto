@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.quedeahuevo2;
 
 /**
@@ -9,5 +5,27 @@ package com.mycompany.quedeahuevo2;
  * @author aries
  */
 public class BaseDatos {
+    private Connection conexion;
+        
+        public BaseDatos(){
+            try{
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                String usuario = "root";
+                String password = "";
+                String bd = "quedeahuevo";
+                String url ="jdbc:mysql://127.0.0.1:3306/"+bd+"?serverTimezone=UTC";
+                conexion = DriverManager.getConnection(url,usuario,password);
+                System.out.println("Conexion exitosa a mysql");
+            }catch(ClassNotFoundException ex){
+                System.out.println("Error, no existe clase");   
+            }catch(SQLException ex){
+                System.out.println("Error de conexion");
+            }    
+        }
+        
+        
+        public Connection getConexion(){
+            return conexion;
+        }
     
 }
