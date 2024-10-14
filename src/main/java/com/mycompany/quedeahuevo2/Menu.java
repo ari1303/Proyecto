@@ -132,6 +132,11 @@ public class Menu extends javax.swing.JFrame {
         menuCategorias.add(menuNuevaCategoria);
 
         menuListaCategorias.setText("Lista De Categorias");
+        menuListaCategorias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuListaCategoriasActionPerformed(evt);
+            }
+        });
         menuCategorias.add(menuListaCategorias);
 
         jMenuBar1.add(menuCategorias);
@@ -190,6 +195,10 @@ public class Menu extends javax.swing.JFrame {
     private void menuNuevoProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNuevoProductoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_menuNuevoProductoActionPerformed
+
+    private void menuListaCategoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuListaCategoriasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menuListaCategoriasActionPerformed
 
     /**
      * @param args the command line arguments
