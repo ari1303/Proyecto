@@ -4,6 +4,10 @@
  */
 package com.mycompany.quedeahuevo2;
 
+import java.sql.Connection;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author aries
@@ -81,6 +85,11 @@ public class PrincipalUsuario extends javax.swing.JFrame {
         jPanel1.add(txtCrearUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 180, -1, -1));
 
         txtPassword.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        txtPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPasswordActionPerformed(evt);
+            }
+        });
         jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 150, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -109,9 +118,9 @@ public class PrincipalUsuario extends javax.swing.JFrame {
         Connection cnx = bd.getConexion();
         
         
-        String nombre = txtNombre.getText();
-        String contraseña = String.valueOf(password.getPassword());
-        String sql = "SELECT * FROM usuarios WHERE nombre ='"+nombre+"', contraseña = '"+contraseña+"';
+        String nombre = txtUsuario.getText();
+        String contraseña = String.valueOf(txtPassword.getPassword());
+        String sql = "SELECT * FROM usuarios WHERE nombre ='"+nombre+"', contraseña = '"+contraseña+"'";
         System.out.println(sql);
         
         try{
@@ -124,6 +133,10 @@ public class PrincipalUsuario extends javax.swing.JFrame {
     
         }
     }//GEN-LAST:event_btnInicioActionPerformed
+
+    private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPasswordActionPerformed
 
     /**
      * @param args the command line arguments
