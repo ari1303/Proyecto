@@ -133,14 +133,28 @@ public class IntActualizar extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-        // TODO add your handling code here:
+        BaseDatos bd = new BaseDatos();
+        Connection cnx = bd.getConexion();
+        
+        int producto = jComboBox1.getSelectedItem();
+        String actual = txtActual.getText();
+        String nuevo = txtNuevo.getText();
+        
+        String sql = "Update producto Set nuevo ='"+nuevo+"', Where actual = '"+actual"';
+        System.out.println(sql);
+        
+        try{
+             Statement st = cnx.createStatement();
+                            //inserta en la base de datos
+            int resultado = st.executeUpdate(sql);
+            JOptionPane.showMessageDialog(rootPane, "Empleado ACTUALIZADO exitosamente");
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(rootPane, "Error al ACTUALIZAR empleado","Importante",JOptionPane.ERROR_MESSAGE);
+    
+        }
     }//GEN-LAST:event_btnActualizarActionPerformed
 
-    private void CargarComboProductos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnActualizar;
     private javax.swing.JComboBox<String> jComboBox1;
