@@ -1,5 +1,6 @@
 package com.mycompany.quedeahuevo2;
 import java.awt.Dimension;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -106,14 +107,22 @@ public class IntCategoria extends javax.swing.JInternalFrame {
         ctrl_Categoria controlCategoria = new ctrl_Categoria();
         
         
-        Categoria.seDescripcion(txtDescripcion.getText().trim());
+        categoria.setDescripcion(txtDescripcion.getText().trim());
         
         //Validamos campos vacios
         if(txtDescripcion.getText().isEmpty()){
-            
+           JOptionPane.showMessageDialog(null, "Complete todos los campos");
         }else{
-            
+            categoria.setDescripcion(txtDescripcion.getText().trim());
+            categoria.setEstado(1);
+            if (controlCategoria.guardar(categoria)){
+                JOptionPane.showMessageDialog(null,"Registro Guardado");
+            } else{
+                JOptionPane.showMessageDialog(null,"Error al  Guardado"); 
+            }
         }
+        //limpiar campo
+        txtDescripcion.setText("");
     }//GEN-LAST:event_btnGuardarActionPerformed
 
 
