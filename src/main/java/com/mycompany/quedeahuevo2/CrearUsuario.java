@@ -77,6 +77,11 @@ public class CrearUsuario extends javax.swing.JDialog {
         btnRegistroUsuario.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         btnRegistroUsuario.setText("RegistaraUsuario");
         btnRegistroUsuario.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnRegistroUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistroUsuarioActionPerformed(evt);
+            }
+        });
         jPanel2.add(btnRegistroUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, -1, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 400, 350));
@@ -104,6 +109,10 @@ public class CrearUsuario extends javax.swing.JDialog {
     private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordActionPerformed
+
+    private void btnRegistroUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegistroUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
