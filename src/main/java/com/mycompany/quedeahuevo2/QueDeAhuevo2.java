@@ -4,6 +4,8 @@
 
 package com.mycompany.quedeahuevo2;
 
+import java.sql.Connection;
+
 /**
  *
  * @author aries
