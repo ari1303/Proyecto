@@ -1,6 +1,4 @@
-
 package com.mycompany.quedeahuevo2;
-
 import java.awt.Dimension;
 
 /**
@@ -51,6 +49,11 @@ public class IntCategoria extends javax.swing.JInternalFrame {
         btnGuardar.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         btnGuardar.setText("Guardar");
         btnGuardar.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -97,6 +100,21 @@ public class IntCategoria extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        Categoria categoria = new Categoria();
+        ctrl_Categoria controlCategoria = new ctrl_Categoria();
+        
+        
+        Categoria.seDescripcion(txtDescripcion.getText().trim());
+        
+        //Validamos campos vacios
+        if(txtDescripcion.getText().isEmpty()){
+            
+        }else{
+            
+        }
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
