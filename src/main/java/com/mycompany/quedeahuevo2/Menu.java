@@ -1,9 +1,13 @@
 package com.mycompany.quedeahuevo2;
 
 import java.awt.Dimension;
+import javax.swing.JDesktopPane;
 
 
 public class Menu extends javax.swing.JFrame {
+    
+    public static JDesktopPane DesktopPane_menu;
+            
 
     /**
      * Creates new form Menu
@@ -14,6 +18,15 @@ public class Menu extends javax.swing.JFrame {
         this.setExtendedState(Menu.MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
         this.setTitle("Sistema de Ventas");
+        
+        this.setLayout(null);
+        DesktopPane_menu = new JDesktopPane();
+        int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
+        int alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
+        this.DesktopPane_menu.setBounds(0, 0,ancho, (alto -110));
+        this.add(DesktopPane_menu);
+        
+        
     }
 
     /**
@@ -183,7 +196,10 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_menuBorrarUsuarioActionPerformed
 
     private void menuNuevaCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNuevaCategoriaActionPerformed
-        IntCategoria interCategoria = new IntCategoria();
+        IntCategoria intcategoria = new IntCategoria();
+        
+        
+        
     }//GEN-LAST:event_menuNuevaCategoriaActionPerformed
 
     /**
