@@ -107,7 +107,7 @@ public class PrincipalUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtCrearUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCrearUsuarioActionPerformed
-        CrearUsuario frame = new CrearUsuario();  // Declaración correcta sin espacio en el nombre
+        CrearUsuario frame = new CrearUsuario(this,true);  // Declaración correcta sin espacio en el nombre
          frame.setVisible(true);                    // Hacer visible la nueva ventana
           this.dispose();                            // Cerrar la ventana actual
 
