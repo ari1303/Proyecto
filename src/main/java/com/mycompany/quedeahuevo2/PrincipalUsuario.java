@@ -105,7 +105,24 @@ public class PrincipalUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCrearUsuarioActionPerformed
 
     private void btnInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioActionPerformed
-        // TODO add your handling code here:
+        BaseDatos bd = new BaseDatos();
+        Connection cnx = bd.getConexion();
+        
+        
+        String nombre = txtNombre.getText();
+        String contraseña = String.valueOf(password.getPassword());
+        String sql = "SELECT * FROM usuarios WHERE nombre ='"+nombre+"', contraseña = '"+contraseña+"';
+        System.out.println(sql);
+        
+        try{
+             Statement st = cnx.createStatement();
+                            //inserta en la base de datos
+            int resultado = st.executeUpdate(sql);
+            JOptionPane.showMessageDialog(rootPane, "Bienvenido");
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(rootPane, "Error. Usuario no valido","Importante",JOptionPane.ERROR_MESSAGE);
+    
+        }
     }//GEN-LAST:event_btnInicioActionPerformed
 
     /**
