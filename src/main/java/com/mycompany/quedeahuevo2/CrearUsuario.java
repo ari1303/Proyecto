@@ -113,7 +113,7 @@ public class CrearUsuario extends javax.swing.JDialog {
         
         //creamos sentencia
         String sql;
-        sql = "Insert Into empleado Values(null,'"+nombre+"','"+apellido+"',"+contraseña+"); ";
+        sql = "Insert Into usuarios Values(null,'"+nombre+"','"+apellido+"','"+contraseña+"'); ";
         System.out.println(sql);
         
         try{
