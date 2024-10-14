@@ -156,20 +156,25 @@ public class IntBorarUsuario extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordActionPerformed
-
-    private void ComboTipoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboTipoUsuarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ComboTipoUsuarioActionPerformed
-
-    private void password2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_password2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_password2ActionPerformed
-
+    
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
-        // TODO add your handling code here:
+        BaseDatos bd = new BaseDatos();
+        Connection cnx = bd.getConexion();
+        
+        String usuario = txtNombre.getText();
+        String apellido = txtApellido.getText();
+        String sql = "Delete From usuarios Where usuario = '"+ usuario"' and apellido = '"+apellido"';
+        System.out.println(sql);
+        
+        try{
+             Statement st = cnx.createStatement();
+                            //inserta en la base de datos
+            int resultado = st.executeUpdate(sql);
+            JOptionPane.showMessageDialog(rootPane, "Usuario ELIMINADO exitosamente");
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(rootPane, "Error al ELIMINAR usuario","Importante",JOptionPane.ERROR_MESSAGE);
+    
+        }
     }//GEN-LAST:event_btnBorrarActionPerformed
 
 
