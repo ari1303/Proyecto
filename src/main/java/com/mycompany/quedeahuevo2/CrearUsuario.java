@@ -119,7 +119,7 @@ public class CrearUsuario extends javax.swing.JDialog {
         String nombre =  txtNombre.getText();
         String apellido = txtApellido.getText();
         String contraseña = String.valueOf(password.getPassword());
-        String tipoUsuario
+        
         
         //creamos sentencia
         String sql;
