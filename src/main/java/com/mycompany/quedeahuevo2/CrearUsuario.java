@@ -4,6 +4,10 @@
  */
 package com.mycompany.quedeahuevo2;
 
+import java.sql.Connection;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
 
 /**
  *
