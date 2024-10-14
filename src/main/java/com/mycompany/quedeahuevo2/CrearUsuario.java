@@ -111,7 +111,30 @@ public class CrearUsuario extends javax.swing.JDialog {
     }//GEN-LAST:event_passwordActionPerformed
 
     private void btnRegistroUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroUsuarioActionPerformed
-        // TODO add your handling code here:
+        BaseDatos bd = new BaseDatos();
+        
+        Connection cnx = bd.getConexion();
+        
+        //obtenemos los datos de los textField
+        String nombre =  txtNombre.getText();
+        String apellido = txtApellido.getText();
+        String contraseña = String.valueOf(password.getPassword());
+        String tipoUsuario
+        
+        //creamos sentencia
+        String sql;
+        sql = "Insert Into empleado Values(null,'"+nombre+"','"+apellido+"',"+contraseña+"); ";
+        System.out.println(sql);
+        
+        try{
+            Statement st = cnx.createStatement();
+                            //inserta en la base de datos
+            int resultado = st.executeUpdate(sql);
+            JOptionPane.showMessageDialog(rootPane, "Empleado creado exitosamente");
+            
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(rootPane, "Error al crear empleado","Importante",JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_btnRegistroUsuarioActionPerformed
 
     /**
